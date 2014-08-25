@@ -1,32 +1,33 @@
 <head>
-	<title></title>
+	<title>Under Her Skin</title>
 	<link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 	{{>header}}
-	{{>landing}}
-	{{>photosFrame}}
+	
+	{{#if getAboutOff}}
+		{{>photosFrame}}
+	{{else}}
+		{{>about}}
+		{{>photosFrame}}
+	{{/if}}
+	
 	{{>footer}}
 </body>
 
 <template name="header">
-	<!-- <nav>
-		<div id="logo"></div>
-	</nav> -->
-
 	<div id="underHerSkin"></div>
 </template>
 
-<template name="landing">
-	
-<div id="about">
-<p>
-Over the past 30 years, researchers have found a widening survival divide between black and white women diagnosed with breast cancer in the United States. The Takeaway’s series “Under Her Skin: Living With Breast Cancer” shares the stories of three African-American women coping with the disease. Over the course of six months, we’ll hear their thoughts and fears, their struggles and triumphs, as their audio diaries capture the realities of a disease that will afflict more than 12 percent of American women at some point in their lives.
-</p>
-<div id="ribbon"></div>
-</div>
+<template name="about">
+	<div id="about">
+		<p>
+		  Over the past 30 years, researchers have found a widening survival divide between black and white women diagnosed with breast cancer in the United States.</p><br><p> Through audio diaries, three African-American women share their thoughts and fears, their struggles and triumphs, as they cope with the disease.
+		</p>
+		
+	</div>
 </template>
 
 <template name="photosFrame">
@@ -35,6 +36,7 @@ Over the past 30 years, researchers have found a widening survival divide betwee
 	  <div id="miller-pic" class="photo"> </div>
 	  <div id="coleman-pic" class="photo"> </div>
 	  <div id="echols-pic" class="photo"> </div>
+
 	</div>
 	{{#if getMillerOn}}
 		{{>miller}}
@@ -51,21 +53,31 @@ Over the past 30 years, researchers have found a widening survival divide betwee
 <template name="miller">
 	<!--CRYSTAL-->
 	<iframe id="miller" frameborder="0" height="650" src="http://cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=0ArmAJfFcZtYadFA4NGhUbHk1dUF6eml0MVQ4bUVXb2c&amp;font=Bevan-PotanoSans&amp;maptype=toner&amp;lang=en&amp;height=650" width="100%"></iframe>
+	 <audio autoplay src="miller.WAV"></audio>
 </template>
 
 <template name="coleman">
-<!--ANITA'S EMBED-->
+	<!--ANITA-->
 	<iframe id="coleman" frameborder="0" height="650" src="http://cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=0ArmAJfFcZtYadEdMcHNONThKMkhrelpWaWFhYXJBTFE&amp;font=Bevan-PotanoSans&amp;maptype=toner&amp;lang=en&amp;height=650" width="100%"></iframe>
+	<audio autoplay src="coleman.WAV"></audio>
+
 </template>
 
 <template name="echols">
 	<!--LISA-->
 	<iframe id="echols" frameborder="0" height="650" src="http://cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=0ArmAJfFcZtYadE5NNUtsWk1FSkVaRVVpbmVsd3BxdlE&amp;font=Bevan-PotanoSans&amp;maptype=toner&amp;lang=en&amp;height=650" width="100%"></iframe>
+	<audio autoplay src="echols.WAV"></audio>
+
 </template>
 
 
 <template name="footer">
 	<div id="footer">
-	<div id="logo"></div>
+	<!-- <p>Made in NYC by</p> -->
+	 <a href="tyleraadams.com" class="credit">Tyler Adams</a>
+	<a href="http://thetakeaway.org"><div id="logo"></div></a>
+	
+	<a href="http://thetakeaway.org" class="icons"><div id="facebook"></div></a>
+	<a href="http://thetakeaway.org" class="icons"><div id="twitter"></div></a>
 	</div>
 </template>

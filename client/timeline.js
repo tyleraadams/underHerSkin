@@ -10,14 +10,16 @@ PhotosFrameTemplate = (function(){
 
 	function onPhotoClick(e) {	
 		setSessions()	
-		var name = e.target.id.charAt(0).toUpperCase() +  e.target.id.slice(1).split("-")[0]
-		Session.set(name+"On",true)
-		$($(e.target).siblings()).css('border-color','white')
-		$(e.target).css('border-color','#FFA18F')
+		var name = e.target.id.charAt(0).toUpperCase() +  e.target.id.slice(1).split("-")[0];
+		Session.set(name+"On",true);
+		$($(e.target).siblings()).css('border-color','white');
+		$(e.target).css('border-color','#FFA18F');
+		$("body,html").animate({scrollTop: "850px"}, 1000);
 	}
 
 	function onRender(){
-		 setSessions();
+		setSessions();
+		getAboutOff();
 	}
 
 	function getMillerOn(){
@@ -32,13 +34,18 @@ PhotosFrameTemplate = (function(){
 		return Session.get('EcholsOn');
 	}
 
+	function getAboutOff() {
+		return Session.get('aboutOff');
+	}
+
 	return {
 		onRender:onRender,
 		onPhotoClick:onPhotoClick,
 		setSessions:setSessions,
 		getMillerOn:getMillerOn,
 		getColemanOn:getColemanOn,
-		getEcholsOn: getEcholsOn
+		getEcholsOn: getEcholsOn,
+		getAboutOff:getAboutOff
 	}
 })();
 
@@ -47,6 +54,7 @@ Template.photosFrame.setSessions = PhotosFrameTemplate.setSessions;
 Template.photosFrame.getMillerOn = PhotosFrameTemplate.getMillerOn;
 Template.photosFrame.getColemanOn = PhotosFrameTemplate.getColemanOn;
 Template.photosFrame.getEcholsOn = PhotosFrameTemplate.getEcholsOn;
+Template.photosFrame.getAboutOff = PhotosFrameTemplate.getAboutOff;
 Template.photosFrame.events = {
 	"click .photo": PhotosFrameTemplate.onPhotoClick
 }
