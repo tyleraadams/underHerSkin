@@ -27,12 +27,12 @@ nav {
 
 #about {
 	height:auto;
-	color:white;
+	color:#071409;
 	padding:12% 5% 0 5%;
 	line-height: 1.66666em;
 	font-size:1em;
 	position:absolute;
-	background:rgba(255,0,0,0.55);
+	background:rgba(244,235,248,0.9);
 	/*opacity:0.85;*/
 	height:323px;
 	text-align: center;
@@ -40,17 +40,24 @@ nav {
 
 #about>p{
 	width:70%;
-	margin:0 auto;
+	margin:70px auto 0 auto;
 }
 
+#about p:first-child{
+    margin-top: -35px;
+}
+
+
 #aboutButton {
-	border:3px solid white;
+	border:2px solid #071409;
 	width:90px;
 	padding:10px;
-	margin:40px auto 0 auto;
+	margin:50px auto 0 auto;
 	text-align: center;
 	border-radius:3px;
-
+	cursor:pointer;
+	/*background:#f1d8ee;*/
+	/*color:white;*/
 }
 
 #contentFrame{
