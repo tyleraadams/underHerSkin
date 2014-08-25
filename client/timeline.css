@@ -30,17 +30,27 @@ nav {
 	color:white;
 	padding:12% 5% 0 5%;
 	line-height: 1.66666em;
-	font-size:0.9em;
+	font-size:1em;
 	position:absolute;
-	background:rgba(255,0,0,0.65);
+	background:rgba(255,0,0,0.55);
 	/*opacity:0.85;*/
 	height:323px;
-	/*text-align: center;*/
+	text-align: center;
 }
 
 #about>p{
 	width:70%;
 	margin:0 auto;
+}
+
+#aboutButton {
+	border:3px solid white;
+	width:90px;
+	padding:10px;
+	margin:40px auto 0 auto;
+	text-align: center;
+	border-radius:3px;
+
 }
 
 #contentFrame{
@@ -82,12 +92,7 @@ nav {
   background-size:cover;
 }
 
-#bottomBorder {
-	border-top:1px solid black;
-	width:50%;
-	margin:0 auto;
 
-}
 #footer {
 	height:100px;
 	padding:1% 3% 0 3%;
@@ -101,6 +106,10 @@ nav {
 	color:black;
 	font-size:0.75em;
 	letter-spacing:2px;
+}
+
+.credit:hover{
+	color:red;
 }
 
 /*p{
