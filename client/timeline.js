@@ -14,7 +14,7 @@ PhotosFrameTemplate = (function(){
 		Session.set(name+"On",true);
 		$($(e.target).siblings()).css('border-color','white');
 		$(e.target).css('border-color','#FFA18F');
-		$("body,html").animate({scrollTop: "850px"}, 1000);
+		$("body,html").animate({scrollTop: "900px"}, 1000);
 	}
 
 

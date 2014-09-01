@@ -57,7 +57,10 @@
 <template name="miller">
 	<!--CRYSTAL-->
 	<div id="audioButton"></div>
-	<iframe id="miller" frameborder="0" height="650" src="http://cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=0ArmAJfFcZtYadFA4NGhUbHk1dUF6eml0MVQ4bUVXb2c&amp;font=Bevan-PotanoSans&amp;maptype=toner&amp;lang=en&amp;height=650" width="100%"></iframe>
+	<iframe id="miller" frameborder="0" height="650" src="http://cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=0ArmAJfFcZtYadFA4NGhUbHk1dUF6eml0MVQ4bUVXb2c&amp;font=Bevan-PotanoSans&amp;maptype=toner&amp;lang=en&amp;height=650" width="100%"><script>
+		$(document).ready(function(){
+			$('.vco-storyjs').css('background', 'beige')
+	})</script></iframe>
 	 <audio autoplay id="player" src="miller.WAV"></audio>
 </template>
 
