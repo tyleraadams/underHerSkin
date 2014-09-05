@@ -20,7 +20,7 @@ nav {
 
 #underHerSkin{
 	width:100%;
-	height:394px;
+	height: 362px;
 	background:url('UnderHerSkin.png') no-repeat center;
 	background-color:rgba(215,192,140,0.9);;
 	background-size:cover;
@@ -29,25 +29,16 @@ nav {
 /*the about div is overlaid on top of #contentFrame and disappears on click*/
 #about {
 	color:#071409;
-	padding: 10% 5% 9.333% 5%;	
+	padding:11% 0 10.75% 0;	
 	line-height: 1.66666em;
 	font-size:1em;
 	position:absolute;
-	background:rgba(215,192,140,0.9);
+	background:rgba(235,223,197,0.9);
 	/*opacity:0.85;*/
 	/*height:210px;*/
 	text-align: center;
+	width: 100%;
 }
-
-
-
-
-
-
-
-
-
-
 
 #about>p{
 	width:70%;
@@ -123,7 +114,7 @@ nav {
 #footer {
 	height:100px;
 	padding:1% 3% 0 3%;
-	/*background:#4F4B3A;*/
+	max-height: 80px;
 }
 
 .credit {
@@ -195,11 +186,30 @@ nav {
 	margin-right:200px !important;
 }
 
+@media only screen and (min-width: 1366px) {
+	#about {
+		font-size:1.25em;
+		
+		padding: 8% 0 7.5% 0%;
+	}
+
+	#aboutButton{
+		border-width:3px;
+	}
+
+
+}
+
+@media only screen and (max-width: 1366px) {
+	#aboutButton{
+		margin-top:20px;
+	}
+}
 
 @media only screen and (max-width: 1224px) {
 	#about{
 		font-size:0.9em;
-		padding:6% 5% 6.75% 5%;	
+		padding:6% 0 6.75% 0;	
 	}
 
 	#about>p{
@@ -226,13 +236,13 @@ nav {
 /*1025 1095*/
 #about{
 		font-size:0.9em;
-		padding:6.25% 5% 6.75% 5%;	
+		padding:6.25% 0 6.75% 0;	
 	}
 }
 @media only screen and (max-width: 1024px) {
 	#about{
 		position:relative;
-
+		background:#d8c291;
 
 	}
 
@@ -260,14 +270,20 @@ nav {
 
 /*691 - 802*/
 @media only screen and (max-width: 810px){ 
-		#underHerSkin{
+	#underHerSkin{
 		height: 240px !important;
+	}
+	
+	#miller-pic,#coleman-pic,#echols-pic {
+		width: 200px;
+		height: 200px;
 	}
 
 }
 @media only screen and (max-width: 690px){
 	#underHerSkin{
 		height: 182px !important;
+		min-height:182px;
 	}
 
 
@@ -282,8 +298,18 @@ nav {
 @media only screen and (max-width: 560px) {	
 
 	#underHerSkin{
-		height: 75px !important;
+		height: 150px !important;
+		min-height:75px;
 	}
 }
+
+@media only screen and (max-width: 480px) {	
+
+	#underHerSkin{
+		height: 130px !important;
+		min-height:60px;
+	}
+}
+
 
 
