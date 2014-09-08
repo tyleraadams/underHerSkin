@@ -88,6 +88,7 @@ Template.photosFrame.getColemanOn = PhotosFrameTemplate.getColemanOn;
 Template.photosFrame.getEcholsOn = PhotosFrameTemplate.getEcholsOn;
 Template.photosFrame.getAboutOff = PhotosFrameTemplate.getAboutOff;
 Template.photosFrame.events = {
+	"touchstart .photo": PhotosFrameTemplate.onPhotoClick,
 	"click .photo": PhotosFrameTemplate.onPhotoClick,
 	"click #audioButton": PhotosFrameTemplate.onAudioClick
 }
